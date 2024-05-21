@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parada 19 e 20</title>
+</head>
+
+<body style="background-color: white;">
+    <h1></h1>
+
+    <button onclick="mudarCor()">Mudar cor de fundo</button>
+
+    <script>
+        let voto = parseInt(prompt("Eleições 2024\n1 - Josevalda\n2 - Jubiscleu\n3 - Jurema\n4 - Juvandir\n0 - Nulo\n\nDigite o número da opção de voto escolhida:"));
+
+        let h1_opcaoVoto = document.querySelector("h1");
+
+        switch (voto) {
+            case 1:
+                h1_opcaoVoto.textContent = "Parabéns, você votou na candidata Josevalda!";
+                break;
+            case 2:
+                h1_opcaoVoto.textContent = "Parabéns, você votou no candidato Jubiscleu!";
+                break;
+            case 3:
+                h1_opcaoVoto.textContent = "Parabéns, você votou na candidata Jurema!";
+                break;
+            case 4:
+                h1_opcaoVoto.textContent = "Parabéns, você votou no candidato Juvandir!";
+                break;
+            case 0:
+                h1_opcaoVoto.textContent = "Você votou nulo!";
+                break;
+            default:
+                h1_opcaoVoto.textContent = "Opção inválida!";
+        }
+
+        function mudarCor() {
+            let body = document.querySelector("body");
+            let btn_mudarCor = document.querySelector("button");
+
+            if (body.style.backgroundColor == "white") {
+                body.style.backgroundColor = "pink";
+                btn_mudarCor.textContent = "Desfazer";
+            } else {
+                body.style.backgroundColor = "white";
+                btn_mudarCor.textContent = "Mudar cor de fundo";
+            }
+        }
+    </script>
+</body>
+
+</html>
